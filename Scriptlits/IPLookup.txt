@@ -1,0 +1,9 @@
+SQL Calculate IP Subnet
+(charindex ( '.' , CMP.IPAddress ,charindex( '.' , CMP.IPAddress ,(charindex('.',CMP.IPAddress) +1 ) ) +1)-1)
+
+SQL Spit out SQL Subnet
+SUBSTRING( 
+					CMP.IPAddress,
+					0,
+					(charindex ( '.' , CMP.IPAddress ,charindex( '.' , CMP.IPAddress ,(charindex('.',CMP.IPAddress) +1 ) ) +1))
+					)

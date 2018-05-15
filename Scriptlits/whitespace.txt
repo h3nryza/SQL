@@ -1,0 +1,4 @@
+spdbhelp databasename
+
+use databasename
+spspace

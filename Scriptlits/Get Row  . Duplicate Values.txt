@@ -1,0 +1,8 @@
+;WITH Vals AS (
+        SELECT [Value],
+                ROW_NUMBER() OVER(PARTITION BY [Value] ORDER BY [Value]) RowID
+        FROM    MyTable
+    )
+select * --DELETE 
+FROM    Vals
+WHERE   RowID > 1
